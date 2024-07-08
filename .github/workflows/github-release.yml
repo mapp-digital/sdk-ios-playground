@@ -4,6 +4,9 @@ on:
   push:
     tags:
       - "0.0.1"
+      
+  workflow_dispatch:
+    branches: [main]
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.head_ref || github.ref }}
