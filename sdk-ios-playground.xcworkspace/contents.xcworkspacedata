@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:sdk-ios-playground-demoApp/sdk-ios-playground-demoApp.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "container:sdk-ios-playground.xcodeproj">
+   </FileRef>
+</Workspace>
