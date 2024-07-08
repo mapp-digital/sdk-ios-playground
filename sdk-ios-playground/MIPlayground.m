@@ -5,8 +5,12 @@
 //  Created by Stefan Stevanovic on 8.7.24..
 //
 
-#import "sdk_ios_playground.h"
+#import "MIPlayground.h"
 
-@implementation sdk_ios_playground
+@implementation MIPlayground
+
++ (void)laugh {
+    NSLog(@"hahahhahahahahaha");
+}
 
 @end

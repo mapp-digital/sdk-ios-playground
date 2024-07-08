@@ -16,6 +16,7 @@
 		A37554E32C3BF7810015F005 /* sdk_ios_playground_demoAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37554E22C3BF7810015F005 /* sdk_ios_playground_demoAppTests.swift */; };
 		A37554ED2C3BF7810015F005 /* sdk_ios_playground_demoAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37554EC2C3BF7810015F005 /* sdk_ios_playground_demoAppUITests.swift */; };
 		A37554EF2C3BF7810015F005 /* sdk_ios_playground_demoAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37554EE2C3BF7810015F005 /* sdk_ios_playground_demoAppUITestsLaunchTests.swift */; };
+		A37554FD2C3BFD7C0015F005 /* libsdk-ios-playground.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A37554FC2C3BFD7C0015F005 /* libsdk-ios-playground.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,8 @@
 		A37554E82C3BF7810015F005 /* sdk-ios-playground-demoAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "sdk-ios-playground-demoAppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A37554EC2C3BF7810015F005 /* sdk_ios_playground_demoAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sdk_ios_playground_demoAppUITests.swift; sourceTree = "<group>"; };
 		A37554EE2C3BF7810015F005 /* sdk_ios_playground_demoAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sdk_ios_playground_demoAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		A37554FC2C3BFD7C0015F005 /* libsdk-ios-playground.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libsdk-ios-playground.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A37554FE2C3BFDBC0015F005 /* sdk-ios-playground-demoApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "sdk-ios-playground-demoApp-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A37554FD2C3BFD7C0015F005 /* libsdk-ios-playground.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +87,7 @@
 				A37554E12C3BF7810015F005 /* sdk-ios-playground-demoAppTests */,
 				A37554EB2C3BF7810015F005 /* sdk-ios-playground-demoAppUITests */,
 				A37554C92C3BF77C0015F005 /* Products */,
+				A37554FB2C3BFD7C0015F005 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -106,6 +111,7 @@
 				A37554D42C3BF77E0015F005 /* Assets.xcassets */,
 				A37554D62C3BF77E0015F005 /* LaunchScreen.storyboard */,
 				A37554D92C3BF77F0015F005 /* Info.plist */,
+				A37554FE2C3BFDBC0015F005 /* sdk-ios-playground-demoApp-Bridging-Header.h */,
 			);
 			path = "sdk-ios-playground-demoApp";
 			sourceTree = "<group>";
@@ -125,6 +131,14 @@
 				A37554EE2C3BF7810015F005 /* sdk_ios_playground_demoAppUITestsLaunchTests.swift */,
 			);
 			path = "sdk-ios-playground-demoAppUITests";
+			sourceTree = "<group>";
+		};
+		A37554FB2C3BFD7C0015F005 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A37554FC2C3BFD7C0015F005 /* libsdk-ios-playground.a */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -195,6 +209,7 @@
 				TargetAttributes = {
 					A37554C72C3BF77C0015F005 = {
 						CreatedOnToolsVersion = 15.4;
+						LastSwiftMigration = 1540;
 					};
 					A37554DD2C3BF7810015F005 = {
 						CreatedOnToolsVersion = 15.4;
@@ -440,6 +455,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = LERY366S7C;
@@ -450,6 +466,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -458,6 +475,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mapp.sdk-ios-playground-demoApp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "sdk-ios-playground-demoApp/sdk-ios-playground-demoApp-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -468,6 +487,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = LERY366S7C;
@@ -478,6 +498,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -486,6 +507,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mapp.sdk-ios-playground-demoApp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "sdk-ios-playground-demoApp/sdk-ios-playground-demoApp-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

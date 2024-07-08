@@ -7,6 +7,8 @@
 
 #import <Foundation/Foundation.h>
 
-@interface sdk_ios_playground : NSObject
+@interface MIPlayground : NSObject
+
++(void)laugh;
 
 @end
