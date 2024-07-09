@@ -49,6 +49,11 @@ jobs:
         uses: get-woke/woke-action@v0
         with:
           fail-on-error: true
+      - name: Tag
+        if: startsWith(github.ref, 'refs/heads/release/')
+        run: |
+            git tag "v$env:GitVersion_SemVer"
+            git push origin "v$env:GitVersion_SemVer"
       - name: Release
         uses: softprops/action-gh-release@v2
         with:
