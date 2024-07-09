@@ -42,9 +42,6 @@ jobs:
     needs: [test_apple_platforms, test_spm]
     name: Create a new GitHub release
     runs-on: ubuntu-latest
-    permissions:
-        actions:write
-        contents: write
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -57,6 +54,8 @@ jobs:
         run: |
           echo "::set-output name=release_tag::UserBuild_$(date +"%Y.%m.%d_%H-%M") ${{ secrets.TOKEN_GB }}"
       - name: Release
+        permissions:
+            contents: write
         uses: softprops/action-gh-release@v2
         with:
           tag_name: ${{ steps.tag.outputs.release_tag }}
