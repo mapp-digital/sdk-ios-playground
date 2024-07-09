@@ -20,6 +20,9 @@ let package = Package(
             path: "sdk-ios-playground",
             cSettings: [
                 .headerSearchPath("**"),
+            ],
+            linkerSettings: [
+                .linkedFramework("Foundation", .when(platforms: [.iOS]))
             ]
         )
     ]
