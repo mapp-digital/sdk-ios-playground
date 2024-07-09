@@ -33,7 +33,7 @@ jobs:
     name: Test SPM
     strategy:
       matrix:
-        os: [macos-latest]
+        os: [ios-latest]
         swift: ["5.2", "5.3"]
     runs-on: ${{ matrix.os }}
     steps:
