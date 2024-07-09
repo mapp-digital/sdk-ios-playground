@@ -47,7 +47,7 @@ jobs:
         run: swift test
 
   release:
-    needs: [test_apple_platforms, test_linux]
+    needs: [test_apple_platforms, test_spm]
     name: Create a new GitHub release
     runs-on: ubuntu-latest
     steps:
