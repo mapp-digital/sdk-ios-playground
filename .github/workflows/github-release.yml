@@ -40,8 +40,6 @@ jobs:
       - name: Install the latest Swift toolchain
         run: swiftly install latest
       - name: Test
-      -F/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks
-      -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include
         run: swift test
 
   release:
