@@ -29,17 +29,22 @@ jobs:
       - name: Test platform ${{ matrix.destination }}
         run: set -o pipefail && xcodebuild -scheme sdk-ios-playground -destination "${{ matrix.destination }}" | xcbeautify
 
-  test_linux:
-    name: Test Linux
-    runs-on: ubuntu-latest
+jobs:
+  build:
+    name: Swift ${{ matrix.swift }} on ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+        swift: ["5.2", "5.3"]
+    runs-on: ${{ matrix.os }}
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-      - name: Install swiftly
-        run: curl -L https://swiftlang.github.io/swiftly/swiftly-install.sh | bash -s -- -y
-      - name: Install the latest Swift toolchain
-        run: swiftly install latest
-      - name: Test
+      - uses: swift-actions/setup-swift@65540b95f51493d65f5e59e97dcef9629ddf11bf
+        with:
+          swift-version: ${{ matrix.swift }}
+      - uses: actions/checkout@v4
+      - name: Build
+        run: swift build
+      - name: Run tests
         run: swift test
 
   release:
