@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A34DDDFD2C3D6D7A0028A281 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A34DDDFC2C3D6D7A0028A281 /* Foundation.framework */; };
 		A37554B82C3BF71A0015F005 /* MIPlayground.m in Sources */ = {isa = PBXBuildFile; fileRef = A37554B72C3BF71A0015F005 /* MIPlayground.m */; };
 		A37554B92C3BF71A0015F005 /* MIPlayground.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = A37554B62C3BF71A0015F005 /* MIPlayground.h */; };
 /* End PBXBuildFile section */
@@ -25,6 +26,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		A34DDDFC2C3D6D7A0028A281 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		A37554B32C3BF71A0015F005 /* libsdk-ios-playground.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libsdk-ios-playground.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A37554B62C3BF71A0015F005 /* MIPlayground.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MIPlayground.h; sourceTree = "<group>"; };
 		A37554B72C3BF71A0015F005 /* MIPlayground.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MIPlayground.m; sourceTree = "<group>"; };
@@ -35,17 +37,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A34DDDFD2C3D6D7A0028A281 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A34DDDFB2C3D6D7A0028A281 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A34DDDFC2C3D6D7A0028A281 /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		A37554AA2C3BF71A0015F005 = {
 			isa = PBXGroup;
 			children = (
 				A37554B52C3BF71A0015F005 /* sdk-ios-playground */,
 				A37554B42C3BF71A0015F005 /* Products */,
+				A34DDDFB2C3D6D7A0028A281 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
