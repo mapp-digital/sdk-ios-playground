@@ -10,10 +10,17 @@ let package = Package(
     ],
     products: [
         .library(
-            name: "MIPlayground",
-            targets: ["sdk-ios-playground"]),
-        .library(
             name: "sdk-ios-playground",
             targets: ["sdk-ios-playground"])
+    ],
+    dependencies: [],
+    targets: [
+        .target(
+            name: "sdk-ios-playground",
+            path: "sdk-ios-playground",
+            cSettings: [
+                .headerSearchPath("**"),
+            ]
+        )
     ]
 )
