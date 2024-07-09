@@ -50,9 +50,9 @@ jobs:
         with:
           fail-on-error: true
        - name: Generate release tag
-        id: tag
-        run: |
-        echo "::set-output name=release_tag::UserBuild_$(date +"%Y.%m.%d_%H-%M")"
+         id: tag
+         run: |
+             echo "::set-output name=release_tag::UserBuild_$(date +"%Y.%m.%d_%H-%M")"
       - name: Release
         uses: softprops/action-gh-release@v2
         with:
