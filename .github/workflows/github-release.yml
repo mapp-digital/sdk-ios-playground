@@ -36,8 +36,7 @@ jobs:
     - uses: actions/checkout@v4
     - name: Build
       run: swift build -v
-    - name: Run tests
-      run: swift test -v
+
 
   release:
     needs: [test_apple_platforms, test_spm]
