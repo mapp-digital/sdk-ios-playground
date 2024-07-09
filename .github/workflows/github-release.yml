@@ -30,13 +30,14 @@ jobs:
         run: set -o pipefail && xcodebuild -scheme sdk-ios-playground -destination "${{ matrix.destination }}" | xcbeautify
 
   test_spm:
+  jobs:
     name: Test SPM
     build:
     runs-on: macos-latest
     steps:
     - uses: actions/checkout@v4
     - name: Build
-      run: swift build -v 
+      run: swift build -v
     - name: Run tests
       run: swift test -v
 
