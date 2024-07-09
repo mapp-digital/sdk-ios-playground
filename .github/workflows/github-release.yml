@@ -31,20 +31,19 @@ jobs:
 
   test_spm:
     name: Test SPM
-    strategy:
-      matrix:
-        os: [ios-latest]
-        swift: ["5.2", "5.3"]
-    runs-on: ${{ matrix.os }}
+    build:
+    #specify OS to run the jobs on
+    runs-on: macos-latest
+    #sequential steps to run for the `build` job
     steps:
-      - uses: swift-actions/setup-swift@65540b95f51493d65f5e59e97dcef9629ddf11bf
-        with:
-          swift-version: ${{ matrix.swift }}
-      - uses: actions/checkout@v4
-      - name: Build
-        run: swift build
-      - name: Run tests
-        run: swift test
+      # step 1, use Marketplace action called Checkout@v2, to checkout the code
+    - uses: actions/checkout@v4 #'uses' keyword launches the Marketplace action
+      # step 2, verbosely build the package using the `swift` CLI
+    - name: Build
+      run: swift build -v #'run' keyword executes the command, as if it's run in terminal
+      # step 3, verbosely test the package using the `swift` CLI
+    - name: Run tests
+      run: swift test -v
 
   release:
     needs: [test_apple_platforms, test_spm]
