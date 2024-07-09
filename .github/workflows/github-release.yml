@@ -32,16 +32,11 @@ jobs:
   test_spm:
     name: Test SPM
     build:
-    #specify OS to run the jobs on
     runs-on: macos-latest
-    #sequential steps to run for the `build` job
     steps:
-      # step 1, use Marketplace action called Checkout@v2, to checkout the code
-    - uses: actions/checkout@v4 #'uses' keyword launches the Marketplace action
-      # step 2, verbosely build the package using the `swift` CLI
+    - uses: actions/checkout@v4
     - name: Build
-      run: swift build -v #'run' keyword executes the command, as if it's run in terminal
-      # step 3, verbosely test the package using the `swift` CLI
+      run: swift build -v 
     - name: Run tests
       run: swift test -v
 
