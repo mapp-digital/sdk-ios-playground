@@ -29,9 +29,8 @@ jobs:
       - name: Test platform ${{ matrix.destination }}
         run: set -o pipefail && xcodebuild -scheme sdk-ios-playground -destination "${{ matrix.destination }}" | xcbeautify
 
-jobs:
-  build:
-    name: Swift ${{ matrix.swift }} on ${{ matrix.os }}
+  test_spm:
+    name: Test SPM
     strategy:
       matrix:
         os: [ubuntu-latest, macos-latest]
