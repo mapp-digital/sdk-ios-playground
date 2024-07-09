@@ -17,13 +17,12 @@ env:
 
 jobs:
   test_apple_platforms:
-    name: Test on iOS and macOS
-    runs-on: macOS-13
+    name: Test on iOS
+    runs-on: macOS-14
     strategy:
       matrix:
         destination:
-          - "platform=macOS"
-          - "platform=iOS Simulator,name=iPhone 12"
+          - "platform=iOS Simulator,name=iPhone 15"
 
     steps:
       - uses: actions/checkout@v4
