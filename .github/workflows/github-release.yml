@@ -49,10 +49,8 @@ jobs:
         uses: get-woke/woke-action@v0
         with:
           fail-on-error: true
-      - name: Generate Tag
-        id: tag
-        run: |
-          echo "::set-output name=release_tag::UserBuild_$(date +"%Y.%m.%d_%H-%M") ${{ secrets.TOKEN_GB }}"
+        tag_name: ${{ github.ref }}
+        release_name: Release ${{ github.ref }}
       - name: Release
         uses: softprops/action-gh-release@v2
         with:
