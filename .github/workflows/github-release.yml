@@ -52,7 +52,7 @@ jobs:
       - name: Release
         uses: softprops/action-gh-release@v2
         with:
-          tag_name: ${{ github.ref }}
-          release_name: Release ${{ github.ref }}
+          tag_name: '0.0.1'
+          release_name: Release 0.0.1
           generate_release_notes: true
           token: ${{ secrets.TOKEN_GB }}
