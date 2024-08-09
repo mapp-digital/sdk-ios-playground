@@ -51,7 +51,7 @@ jobs:
           fail-on-error: true
       - name: Release
         uses: softprops/action-gh-release@v2
+        if: startsWith(github.ref, 'refs/tags/')
         with:
-          version_regex: ^v[[:digit:]]+\.[[:digit:]]+\.[[:digit:]]+
           generate_release_notes: true
           token: ${{ secrets.TOKEN_GB }}
