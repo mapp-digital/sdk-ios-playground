@@ -49,11 +49,9 @@ jobs:
         uses: get-woke/woke-action@v0
         with:
           fail-on-error: true
-        tag_name: ${{ github.ref }}
-        release_name: Release ${{ github.ref }}
       - name: Release
         uses: softprops/action-gh-release@v2
         with:
-          tag_name: ${{ steps.tag.outputs.release_tag }}
+          version_regex: ^v[[:digit:]]+\.[[:digit:]]+\.[[:digit:]]+
           generate_release_notes: true
           token: ${{ secrets.TOKEN_GB }}
