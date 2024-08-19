@@ -1,0 +1,23 @@
+{
+  "name": "MIPlayground",
+  "version": "5.0.11",
+  "authors": {
+    "Mapp Digital": "devgroup.mobile@webtrekk.com"
+  },
+  "homepage": "https://mapp.com/mapp-cloud/analytics/app-analytics/",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE.md"
+  },
+  "platforms": {
+    "ios": "12.0"
+  },
+  "source": {
+    "git": "https://github.com/mapp-digital/MappIntelligence-iOS-v5.git"
+  },
+  "source_files": "sdk-ios-playground/**/*.{h,m}",
+  "ios": {
+    "source_files": "sdk-ios-playground/**/*.{h,m}"
+  },
+  "summary": "The MappIntelligence SDK allows you to track user activities, screen flow usage for your App."
+}
