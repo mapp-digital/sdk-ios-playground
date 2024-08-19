@@ -37,7 +37,7 @@ jobs:
     - name: Build
       run: swift build -v
       
-    test_cocoapods:
+   test_cocoapods:
         name: Test Cocoa Pods
         runs-on: macos-latest
         steps:
@@ -57,7 +57,7 @@ jobs:
             lint: false
 
   release:
-    needs: [test_apple_platforms, test_spm]
+    needs: [test_apple_platforms, test_spm, test_cocoapods]
     name: Create a new GitHub release
     runs-on: ubuntu-latest
     steps:
