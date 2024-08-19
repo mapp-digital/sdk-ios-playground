@@ -37,9 +37,18 @@ jobs:
     - name: Build
       run: swift build -v
       
+  test_cocoapods:
+    name: Test Cocoa Pods
+    runs-on: macos-latest
+    steps:
+    - uses: actions/checkout@v4
+    - name: Build
+      run: swift build -v
+
+      
 
   release:
-    needs: [test_apple_platforms, test_spm]
+    needs: [test_apple_platforms, test_spm, test_cocoapods]
     name: Create a new GitHub release
     runs-on: ubuntu-latest
     steps:
