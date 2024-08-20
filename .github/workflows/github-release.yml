@@ -43,8 +43,7 @@ jobs:
     steps:
     - uses: actions/checkout@master
     - name: Switch XCode Version
-      run: sudo xcode-select -s /Applications/Xcode_15.4.app \
-           xcrun xctrace list devices
+      run: sudo xcode-select -s /Applications/Xcode_15.4.app
     - name: Install Dependences
       run: |
         cd Example
