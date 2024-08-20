@@ -26,6 +26,7 @@
 		A3BA0E5E2C738F5A00A1D030 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A3BA0E612C738F5A00A1D030 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A3BA0E632C738F5B00A1D030 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A3BA0E8E2C74A27100A1D030 /* example.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = example.xctestplan; sourceTree = "<group>"; };
 		C116769C6DE6B279775A3A14 /* Pods_example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C443ECEA067AC20E7573BCC7 /* Pods-example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-example.debug.xcconfig"; path = "Target Support Files/Pods-example/Pods-example.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -48,13 +49,13 @@
 				C443ECEA067AC20E7573BCC7 /* Pods-example.debug.xcconfig */,
 				03E60B52E8147309FABBBDB7 /* Pods-example.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
 		A3BA0E492C738F5800A1D030 = {
 			isa = PBXGroup;
 			children = (
+				A3BA0E8E2C74A27100A1D030 /* example.xctestplan */,
 				A3BA0E542C738F5800A1D030 /* example */,
 				A3BA0E532C738F5800A1D030 /* Products */,
 				34DE0FB43EBC1E7AA61C6818 /* Pods */,
