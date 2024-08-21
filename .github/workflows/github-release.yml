@@ -26,8 +26,6 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
-      - name: Test platform ${{ matrix.destination }}
-        run: set -o pipefail && xcodebuild -scheme sdk-ios-playground -destination "${{ matrix.destination }}" | xcbeautify
       - name: Generate Git Tag
       id: generate_tag
       run: |
@@ -42,14 +40,14 @@ jobs:
         NEW_TAG="${VERSION_PREFIX}${VERSION_MAJOR_MINOR}.${VERSION_PATCH}"
         echo "Generated new tag: $NEW_TAG"
         echo "NEW_TAG=$NEW_TAG" >> $GITHUB_ENV
-        
-      - name: Push Git Tag
+     - name: Push Git Tag
         run: |
          git config user.name "GitHub Actions"
          git config user.email "github-actions@users.noreply.github.com"
          git tag $NEW_TAG
          git push origin $NEW_TAG
-      
+      - name: Test platform ${{ matrix.destination }}
+        run: set -o pipefail && xcodebuild -scheme sdk-ios-playground -destination "${{ matrix.destination }}" | xcbeautify
 
   test_spm:
     name: Test SPM
