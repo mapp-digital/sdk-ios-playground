@@ -60,6 +60,8 @@ jobs:
       
 
   release:
+    needs: [test_apple_platforms, test_spm, test_cocoapods]
+    name: Create a new GitHub release
     - name: Generate Git Tag
       id: generate_tag
       run: |
@@ -82,8 +84,6 @@ jobs:
         git tag $NEW_TAG
         git push origin $NEW_TAG
         
-    needs: [test_apple_platforms, test_spm, test_cocoapods]
-    name: Create a new GitHub release
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
