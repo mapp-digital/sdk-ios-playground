@@ -24,21 +24,6 @@ jobs:
         destination:
           - "platform=iOS Simulator,name=iPhone 15"
 
-    steps:
-      - uses: actions/checkout@v4
-      - name: Test platform ${{ matrix.destination }}
-        run: set -o pipefail && xcodebuild -scheme sdk-ios-playground -destination "${{ matrix.destination }}" | xcbeautify
-      - name: Create tag
-        uses: actions/github-script@v6
-        with:
-          script: |
-            github.rest.git.createRef({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              ref: 'refs/tags/v${{ steps.extract-version.outputs.VERSION }}',
-              sha: context.sha
-            })
-
 
   test_spm:
     name: Test SPM
